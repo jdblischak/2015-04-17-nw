@@ -34,7 +34,7 @@ eventbrite: 15851126145
 -->
 {% if page.eventbrite %}
 <iframe
-  src="//www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
+  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
   frameborder="0"
   width="100%"
   height="206px"
@@ -59,6 +59,13 @@ eventbrite: 15851126145
   management, and task automation.  Participants will be encouraged to
   help one another and to apply what they have learned to their own
   research problems.
+</p>
+<p align="center">
+  <em>
+    For more information on what we teach and why,
+    please see our paper
+    "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
+  </em>
 </p>
 
 <!--
@@ -263,11 +270,15 @@ eventbrite: 15851126145
 <h2 id="setup">Setup</h2>
 
 <p>
-  <a href="setup/index.html">This page</a> has instructions on testing
-  that you have the right software installed.
+  To participate in a Software Carpentry workshop, you will need 
+  access to the software described below. In addition, you will 
+  need an up-to-date web browser.
+  Once you are done installing the software listed below,
+  please go to <a href="setup/index.html">this page</a>,
+  which has instructions on how to test that everything was installed correctly.
 </p>
 
-<div> <!-- Start of 'editor' section. -->
+<div id="editor"> <!-- Start of 'editor' section. -->
   <h3>Text Editor</h3>
 
   <p>
@@ -282,7 +293,7 @@ eventbrite: 15851126145
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="editor-windows">Windows</h4>
       <p>
 	<code>nano</code> is the editor installed by the Software
 	Carpentry Installer, it is a basic editor integrated into the
@@ -298,7 +309,7 @@ eventbrite: 15851126145
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="editor-macosx">Mac OS X</h4>
       <p>
 	We recommend
 	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
@@ -308,7 +319,7 @@ eventbrite: 15851126145
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="editor-linux">Linux</h4>
       <p>
 	<a href="http://kate-editor.org/">Kate</a> is one option for
 	Linux users.  In a pinch, you can use <code>nano</code>, which
@@ -318,7 +329,7 @@ eventbrite: 15851126145
   </div>
 </div> <!-- End of 'editor' section. -->
 
-<div> <!-- Start of 'shell' section. -->
+<div id="shell"> <!-- Start of 'shell' section. -->
   <h3>The Bash Shell</h3>
 
   <p>
@@ -328,23 +339,19 @@ eventbrite: 15851126145
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="shell-windows">Windows</h4>
       <p>
-	Install Git for Windows by download and running
+	Install Git for Windows by downloading and running
 	<a href="http://msysgit.github.io/">the installer</a>.
 	This will provide you with both Git and Bash in the Git Bash program.
       </p>
-      <h4>Software Carpentry Installer</h4>
+      <h4>Software Carpentry Windows Installer</h4>
+      <p>It installs and configures <code>nano</code> (<a href="{{site.swc_github}}/windows-installer">Among other things</a>)</p>
       <p><em>This installer requires an active internet connection.</em></p>
       <p>After installing R and Git Bash:</p>
       <ul>
 	<li>
-          Download the <a href="{{site.swc_installer}}">installer</a>.
-	</li>
-	<li>
-          If the file opens directly in the browser
-          select <strong>File&rarr;Save Page As</strong> to download it
-          to your computer.
+          Download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>.
 	</li>
 	<li>
           Double click on the file to run it.
@@ -352,7 +359,7 @@ eventbrite: 15851126145
       </ul>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="shell-macosx">Mac OS X</h4>
       <p>
 	The default shell in all versions of Mac OS X is bash, so no
 	need to install anything.  You access bash from the Terminal
@@ -362,7 +369,7 @@ eventbrite: 15851126145
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="shell-linux">Linux</h4>
       <p>
 	The default shell is usually <code>bash</code>, but if your
 	machine is set up differently you can run it by opening a
@@ -371,28 +378,32 @@ eventbrite: 15851126145
       </p>
     </div>
   </div>
-<div> <!-- End of 'shell' section. -->  
+<div> <!-- End of 'shell' section. -->
 
-<div> <!-- Start of 'Git' section. -->
+<div id='git'> <!-- Start of 'Git' section. GitHub browser compatability
+           is given at https://help.github.com/articles/supported-browsers/-->
   <h3>Git</h3>
 
   <p>
     Git is a version control system that lets you track who made changes
     to what when and has options for easily updating a shared or public
     version of your code
-    on <a href="https://github.com/">github.com</a>.
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
+    web browser (current versions of Chrome, Firefox or Safari,
+    or Internet Explorer version 9 or above).
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="git-windows">Windows</h4>
       <p>
 	Git should be installed on your computer as part of your Bash
 	install (described above).
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="git-macosx">Mac OS X</h4>
       <p>
 	<strong>For OS X 10.8 and higher</strong>, install Git for Mac
 	by downloading and running
@@ -407,7 +418,7 @@ eventbrite: 15851126145
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="git-linux">Linux</h4>
       <p>
 	If Git is not already available on your machine you can try to
 	install it via your distro's package manager. For Debian/Ubuntu run
@@ -418,7 +429,7 @@ eventbrite: 15851126145
   </div>
 </div> <!-- End of 'Git' section. -->
 
-<div> <!-- Start of 'R' section. -->
+<div id="r"> <!-- Start of 'R' section. -->
   <h3>R</h3>
 
   <p>
@@ -430,7 +441,7 @@ eventbrite: 15851126145
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="r-windows">Windows</h4>
       <p>
 	Install R by downloading and running
 	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
@@ -440,7 +451,7 @@ eventbrite: 15851126145
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="r-macosx">Mac OS X</h4>
       <p>
 	Install R by downloading and running
 	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
@@ -450,7 +461,7 @@ eventbrite: 15851126145
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="r-linux">Linux</h4>
       <p>
 	You can download the binary files for your distribution
 	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
